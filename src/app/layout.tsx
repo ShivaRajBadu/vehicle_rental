@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="max-w-[1440px] w-[95%] px-5 mx-auto">
+        <div className="max-w-[1440px]  px-5 mx-auto">
           <Navabar />
           {children}
         </div>
