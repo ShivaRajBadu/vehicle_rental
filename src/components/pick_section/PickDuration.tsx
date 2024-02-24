@@ -4,11 +4,14 @@ function PickDuration() {
   return (
     <div className="flex gap-6">
       <div className="w-[33%]">
-        <label className="block pb-2 text-[16px] font-bold" htmlFor="location">
+        <label
+          className="block md:pb-2 text-[10px] sm:text-[12px] md:text-[16px] font-bold"
+          htmlFor="location"
+        >
           Location
         </label>
         <input
-          className="focus:outline-none border-b w-full"
+          className="focus:outline-none border-b w-full text-[10px] sm:text-[12px] md:text-[16px] placeholder:text-[10px]"
           type="text"
           name="location"
           id="location"
@@ -16,11 +19,14 @@ function PickDuration() {
         />
       </div>
       <div className="w-[33%]">
-        <label className="block pb-2 text-[16px] font-bold" htmlFor="date">
+        <label
+          className="block md:pb-2 text-[10px] sm:text-[12px] md:text-[16px] font-bold"
+          htmlFor="date"
+        >
           Date
         </label>
         <input
-          className="focus:outline-none border-b w-full"
+          className="focus:outline-none border-b w-full text-[10px] sm:text-[12px] md:text-[16px] placeholder:text-[10px]"
           type="date"
           name="date"
           id="date"
@@ -28,11 +34,14 @@ function PickDuration() {
         />
       </div>
       <div className="w-[33%]">
-        <label className="block pb-2 text-[16px] font-bold" htmlFor="time">
+        <label
+          className="block md:pb-2 text-[10px] sm:text-[12px] md:text-[16px] font-bold"
+          htmlFor="time"
+        >
           Time
         </label>
         <input
-          className="focus:outline-none border-b w-full"
+          className="focus:outline-none border-b w-full text-[10px] sm:text-[12px] md:text-[16px] placeholder:text-[10px]"
           type="text"
           name="time"
           id="time"
