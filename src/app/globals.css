@@ -3,8 +3,9 @@
 @tailwind utilities;
 
 :root {
-  --background: "#ffffff";
-  --text: "#000000";
+  --background: #f6f7f9;
+  --text: #000000;
+  --white: #ffffff;
   /* primary */
   --primary-dark-900: #0a196f;
   --primary-dark-800: #102587;
@@ -36,6 +37,8 @@
   --success-dark-300: "#D3F178";
   --success-dark-200: "#E8FAA6";
   --success-dark-100: "#F5FCD2";
+
+  --information-500: #54a6ff;
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -47,17 +50,33 @@
 } */
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: var(--background);
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+.wave-animation {
+  animation: wave 2s ease-in-out infinite;
+}
+
+/* .wave-animation-delay {
+  animation: wave 2s 1.2s ease-in-out infinite;
+} */
+
+@keyframes wave {
+  0% {
+    transform: scale(1);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.9;
+  }
+
+  100% {
+    transform: scale(2);
+    opacity: 0;
   }
 }
