@@ -2,7 +2,9 @@
 import { useState } from "react";
 import CarCard from "./CarCard";
 
-function PopularCar() {
+function CarSection({ title }: Readonly<{ title: string }>) {
+  console.log(title);
+
   const [carCollection, setCarCollection] = useState([
     {
       id: 1,
@@ -66,7 +68,7 @@ function PopularCar() {
     <div className="py-8">
       <div className="flex justify-between py-4">
         <h2 className="text-[16px] font-semibold text-[color:var(--secondary-dark-300)]">
-          Popular Car
+          {title}
         </h2>
         <button className="text-[16px] font-normal text-[color:var(--primary-dark-500)]">
           View All
@@ -83,8 +85,15 @@ function PopularCar() {
           <CarCard key={car.id} {...car} favorite={handleFavorite} />
         ))}
       </div>
+      {title === "Recommended Car" && (
+        <div className="flex justify-center py-6 mt-10">
+          <button className="py-4 px-6 text-center  bg-[color:var(--primary-dark-500)] text-[color:var(--white)] rounded-md font-bold hover:bg-[color:var(--primary-dark-600)] duration-300 ease-in-out hover:shadow-2xl ">
+            Show more car
+          </button>
+        </div>
+      )}
     </div>
   );
 }
 
-export default PopularCar;
+export default CarSection;
