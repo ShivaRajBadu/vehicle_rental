@@ -11,7 +11,7 @@ function PickDuration() {
           Location
         </label>
         <input
-          className="focus:outline-none border-b w-full text-[10px] sm:text-[12px] md:text-[16px] placeholder:text-[10px]"
+          className="focus:outline-none border-b w-full text-[10px] sm:text-[12px] md:text-[16px] placeholder:text-[10px] md:placeholder:text-[16px]"
           type="text"
           name="location"
           id="location"
@@ -26,7 +26,7 @@ function PickDuration() {
           Date
         </label>
         <input
-          className="focus:outline-none border-b w-full text-[10px] sm:text-[12px] md:text-[16px] placeholder:text-[10px]"
+          className="focus:outline-none border-b w-full text-[10px] sm:text-[12px] md:text-[16px] placeholder:text-[10px] md:placeholder:text-[16px]"
           type="date"
           name="date"
           id="date"
@@ -41,7 +41,7 @@ function PickDuration() {
           Time
         </label>
         <input
-          className="focus:outline-none border-b w-full text-[10px] sm:text-[12px] md:text-[16px] placeholder:text-[10px]"
+          className="focus:outline-none border-b w-full text-[10px] sm:text-[12px] md:text-[16px] placeholder:text-[10px] md:placeholder:text-[16px]"
           type="text"
           name="time"
           id="time"

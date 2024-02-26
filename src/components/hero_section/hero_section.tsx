@@ -23,13 +23,11 @@ function HeroSection() {
     },
   ];
   return (
-    <Wrapper>
-      <div className=" flex md:flex-row flex-col justify-between gap-6  py-8">
-        {ads.map((ad, index) => (
-          <HeroAds key={index} {...ad} />
-        ))}
-      </div>
-    </Wrapper>
+    <div className=" flex md:flex-row flex-col justify-between gap-6  py-8">
+      {ads.map((ad, index) => (
+        <HeroAds key={index} {...ad} />
+      ))}
+    </div>
   );
 }
 
