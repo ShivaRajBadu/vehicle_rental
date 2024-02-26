@@ -57,19 +57,19 @@ function Footer() {
     },
   ];
   return (
-    <div className="bg-[color:var(--white)] py-12">
+    <div className="bg-[color:var(--white)] pt-12 ">
       <Wrapper>
-        <div className="flex flex-col gap-6 items-center md:flex-row px-2 justify-between">
-          <div className="text-center">
+        <div className="flex flex-col gap-6 max-md:items-center md:flex-row px-2 py-6 justify-between">
+          <div className="max-md:text-center ">
             <h1 className="text-[color:var(--primary-dark-500)] text-4xl font-[700]">
               MORENT
             </h1>
-            <p className="text-[16px] py-4 text-[color:var(--secondary-dark-500)] max-w-[50%] mx-auto">
+            <p className="text-[16px] py-4 text-[color:var(--secondary-dark-500)] max-w-[50%] max-md:mx-auto">
               Our vision is to provide convenience and help increase your sales
               business.
             </p>
           </div>
-          <div className="flex flex-wrap gap-12">
+          <div className="flex max-md:flex-wrap gap-12">
             {/* About us */}
             <div>
               <h2 className="text-[color:var(--secondary-dark-500)] text-xl font-[600]">
@@ -119,6 +119,20 @@ function Footer() {
               </ul>
             </div>
           </div>
+        </div>
+        <hr />
+        <div className="flex justify-center md:justify-between pt-4 pb-6 flex-wrap gap-4 items-center">
+          <p className="text-[16px] text-[color:var(--secondary-dark-500)] font-semibold">
+            &copy;{new Date().getFullYear()} MORENT. All right reserved.
+          </p>
+          <ul className="flex  gap-6">
+            <li className="text-[16px] font-semibold text-[color:var(--secondary-dark-500)]">
+              Privacy Policy
+            </li>
+            <li className="text-[16px] font-semibold text-[color:var(--secondary-dark-500)]">
+              Terms & Conditions
+            </li>
+          </ul>
         </div>
       </Wrapper>
     </div>
