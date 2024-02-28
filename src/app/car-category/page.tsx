@@ -73,7 +73,7 @@ function CarCategory() {
     <div className="bg-[color:var(--white)]">
       <Wrapper>
         <div className="flex gap-2">
-          <aside className="w-[25%]">
+          <aside className="w-[25%] hidden md:block">
             <div className="py-2">
               <h3 className="text-sm text-[color:var(--secondary-dark-300)] uppercase font-semibold pt-2 pb-4">
                 Types
@@ -84,7 +84,7 @@ function CarCategory() {
                     <div key={index} className="flex gap-3 items-center ">
                       <input type="checkbox" name={carType} id={carType} />
                       <label
-                        className="text-[20px] font-medium text-[color:var(--secondary-dark-400)]"
+                        className=" md:text-[16px] lg:text-[20px] font-medium text-[color:var(--secondary-dark-400)]"
                         htmlFor={carType}
                       >
                         {carType}
@@ -108,7 +108,7 @@ function CarCategory() {
                         id={carCapacity}
                       />
                       <label
-                        className="text-[20px] font-medium text-[color:var(--secondary-dark-400)]"
+                        className=" md:text-[16px] lg:text-[20px] font-medium text-[color:var(--secondary-dark-400)]"
                         htmlFor={carCapacity}
                       >
                         {carCapacity} Persons

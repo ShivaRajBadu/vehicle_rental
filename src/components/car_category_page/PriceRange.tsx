@@ -16,7 +16,7 @@ function PriceRange() {
         id="priceRange"
       />
       <label
-        className="block text-[20px] mt-5 text-[color:var(--secondary-dark-400)] font-semibold"
+        className="block  md:text-[16px] lg:text-[20px] mt-5 text-[color:var(--secondary-dark-400)] font-semibold"
         htmlFor="priceRange"
       >
         MAX.${priceRange.toFixed(2)}
