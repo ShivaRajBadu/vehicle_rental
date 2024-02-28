@@ -1,13 +1,14 @@
 import Image from "next/image";
+import Link from "next/link";
 
 function Navabar() {
   return (
-    <div className="bg-[#ffffff]">
+    <div className="bg-[#ffffff]  py-3">
       <div className="flex items-start  md:items-center justify-between py-4 w-full  md:gap-4  max-w-[1440px]  px-5 mx-auto">
         <div className="flex md:flex-row items-start w-full flex-col gap-12  md:items-center  justify-between md:max-w-[75%]  lg:max-w-[50%]  ">
           <div className="flex justify-between w-full md:max-w-[150px] ">
             <h1 className="text-[color:var(--primary-dark-500)] text-2xl font-[700] ">
-              MORENT
+              <Link href={"/"}>MORENT</Link>
             </h1>
             <Image
               src={"/icons/menu.svg"}

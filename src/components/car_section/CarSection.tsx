@@ -1,9 +1,19 @@
 "use client";
 import { useState } from "react";
 import CarCard from "./CarCard";
+import { useRouter } from "next/navigation";
 
-function CarSection({ title }: Readonly<{ title: string }>) {
+function CarSection({
+  title = "Popular Car",
+  isHomePage = true,
+  showMoreButton = false,
+}: Readonly<{
+  title?: string;
+  isHomePage?: boolean;
+  showMoreButton?: boolean;
+}>) {
   console.log(title);
+  const router = useRouter();
 
   const [carCollection, setCarCollection] = useState([
     {
@@ -66,14 +76,19 @@ function CarSection({ title }: Readonly<{ title: string }>) {
   }
   return (
     <div className="py-8">
-      <div className="flex justify-between py-4">
-        <h2 className="text-[16px] font-semibold text-[color:var(--secondary-dark-300)]">
-          {title}
-        </h2>
-        <button className="text-[16px] font-normal text-[color:var(--primary-dark-500)]">
-          View All
-        </button>
-      </div>
+      {isHomePage && (
+        <div className="flex justify-between py-4">
+          <h2 className="text-[16px] font-semibold text-[color:var(--secondary-dark-300)]">
+            {title}
+          </h2>
+          <button
+            onClick={() => router.push("/car-category")}
+            className="text-[16px] font-normal text-[color:var(--primary-dark-500)]"
+          >
+            View All
+          </button>
+        </div>
+      )}
       <div
         style={{
           gridTemplateColumns: "repeat(auto-fill, minmax(260px,1fr))",
@@ -85,7 +100,7 @@ function CarSection({ title }: Readonly<{ title: string }>) {
           <CarCard key={car.id} {...car} favorite={handleFavorite} />
         ))}
       </div>
-      {title === "Recommended Car" && (
+      {showMoreButton && (
         <div className="flex justify-center py-6 mt-10">
           <button className="py-4 px-6 text-center  bg-[color:var(--primary-dark-500)] text-[color:var(--white)] rounded-md font-bold hover:bg-[color:var(--primary-dark-600)] duration-300 ease-in-out hover:shadow-2xl ">
             Show more car

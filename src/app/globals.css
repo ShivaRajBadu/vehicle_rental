@@ -81,3 +81,32 @@ body {
     opacity: 0;
   }
 }
+
+input[type="checkbox"] {
+  appearance: none;
+  background-color: #fff;
+  margin: 0;
+  font: inherit;
+  color: currentColor;
+  width: 24px;
+  height: 24px;
+  border: 0.15em solid var(--secondary-dark-200);
+  border-radius: 0.4em;
+  display: grid;
+  place-content: center;
+}
+
+input[type="checkbox"]::before {
+  content: "";
+  width: 14px;
+  height: 14px;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+
+  box-shadow: inset 1em 1em var(--primary-dark-400);
+  transform-origin: bottom left;
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+input[type="checkbox"]:checked::before {
+  transform: scale(1);
+}

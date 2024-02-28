@@ -9,7 +9,7 @@ export default function Home() {
       <HeroSection />
       <PickSection />
       <CarSection title="Popular Car" />
-      <CarSection title="Recommended Car" />
+      <CarSection title="Recommended Car" showMoreButton={true} />
     </Wrapper>
   );
 }
