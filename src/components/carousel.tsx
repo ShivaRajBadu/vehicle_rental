@@ -22,10 +22,10 @@ const CustomCarousel = ({ images }: { images: image[] }) => {
     setCurrentIndex(index);
   };
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [showFullScreen, setShowFullScreen] = useState(true);
+  const [showFullScreen, setShowFullScreen] = useState(false);
   return (
     <div>
-      <div className="max-w-[500px] w-full shadow-md h-[400px] relative">
+      <div className=" w-full shadow-md h-[400px] relative">
         <Image
           src={images[currentIndex].src}
           fill
