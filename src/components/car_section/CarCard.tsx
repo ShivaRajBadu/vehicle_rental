@@ -1,10 +1,9 @@
 import Image from "next/image";
 import React from "react";
-
-// car typescript type
+import FavoriteButton from "./FavoriteButton";
+import RentNowButton from "./RentNowButton";
 
 interface CarCardProps {
-  favorite: Function;
   id: number;
   carName: string;
   carType: string;
@@ -19,7 +18,6 @@ interface CarCardProps {
   isFavorite: boolean;
 }
 function CarCard({
-  favorite,
   id,
   carName,
   carType,
@@ -41,22 +39,16 @@ function CarCard({
             {carType}
           </p>
         </div>
+        <FavoriteButton isFavorite={isFavorite} id={id} />
+      </div>
+      <div className="relative h-[120px]">
         <Image
-          onClick={() => favorite(id)}
-          src={isFavorite ? "/icons/heart_fav.svg" : "/icons/heart.svg"}
-          width={24}
-          height={24}
-          className="cursor-pointer "
-          alt={"favioute"}
+          className="py-2 mx-auto object-contain"
+          src={carImage}
+          fill
+          alt={"car"}
         />
       </div>
-      <Image
-        className="py-2 mx-auto"
-        src={carImage}
-        width={300}
-        height={200}
-        alt={"car"}
-      />
       <div className="flex justify-between py-8 mt-2 gap-2">
         <div className="flex gap-1 items-center">
           <svg
@@ -147,9 +139,7 @@ function CarCard({
             </p>
           )}
         </div>
-        <button className="bg-[color:var(--primary-dark-500)] px-4 py-2 rounded-md font-bold  text-[color:var(--white)] hover:scale-[1.015] duration-200">
-          Rent Now
-        </button>
+        <RentNowButton />
       </div>
     </div>
   );
