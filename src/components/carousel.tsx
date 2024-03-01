@@ -40,7 +40,7 @@ const CustomCarousel = ({ images }: { images: image[] }) => {
           <Image src={fullScreenIcon} alt="arrow" width={20} height={20} />
         </div>
       </div>
-      <div className="flex gap-2 py-4">
+      <div className="flex gap-2 justify-center py-4">
         {images.map((each, index) => (
           <div
             key={index}

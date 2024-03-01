@@ -1,7 +1,7 @@
 import React from "react";
 import Star from "./Star";
 
-const CarReview = ({
+const CarReviewStar = ({
   carNumberOfReviews,
   showReviewText = true,
 }: {
@@ -27,4 +27,4 @@ const CarReview = ({
   );
 };
 
-export default CarReview;
+export default CarReviewStar;

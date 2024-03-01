@@ -1,8 +1,9 @@
 import React from "react";
 import FavoriteButton from "../car_section/FavoriteButton";
 import CarFeature from "./CarFeature";
-import CarReview from "./CarReview";
+
 import RentNowButton from "../car_section/RentNowButton";
+import CarReviewStar from "./CarReviewStar";
 
 const CarInfo = () => {
   return (
@@ -13,7 +14,7 @@ const CarInfo = () => {
         </h1>
         <FavoriteButton id={1} isFavorite={true} />
       </div>
-      <CarReview carNumberOfReviews={2} />
+      <CarReviewStar carNumberOfReviews={2} />
       <p className="text-[20px] font-normal text-[color:var(--secondary-dark-400)] py-8">
         NISMO has become the embodiment of Nissan's outstanding performance,
         inspired by the most unforgiving proving ground, the "race track".
@@ -36,7 +37,7 @@ const CarInfo = () => {
             $100.00
           </h3>
         </div>
-        <RentNowButton paddingX="38px" fontSize="24px" />
+        <RentNowButton paddingX="38px" fontSize="18px" />
       </div>
     </div>
   );

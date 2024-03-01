@@ -1,9 +1,7 @@
-import CarFeature from "@/components/car_details/CarFeature";
 import CarInfo from "@/components/car_details/CarInfo";
-import CarReview from "@/components/car_details/CarReview";
+
 import CarReviews from "@/components/car_details/CarReviews";
-import FavoriteButton from "@/components/car_section/FavoriteButton";
-import RentNowButton from "@/components/car_section/RentNowButton";
+
 import CustomCarousel from "@/components/carousel";
 import Wrapper from "@/components/wrapper";
 import { generateImage } from "@/utils/imageGenerator";
@@ -31,8 +29,8 @@ const CarDetails = () => {
   return (
     <div className="py-8">
       <Wrapper>
-        <div className="flex  gap-8  justify-between">
-          <div className="w-[40%]">
+        <div className="flex flex-col lg:flex-row  gap-8  justify-between">
+          <div className="w-full lg:w-[40%]">
             <CustomCarousel images={images} />
           </div>
           <CarInfo />

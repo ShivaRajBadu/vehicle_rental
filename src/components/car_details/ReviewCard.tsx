@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
-import CarReview from "./CarReview";
+import CarReviewStar from "./CarReviewStar";
+
 const ReviewCard = () => {
   return (
     <div>
@@ -25,7 +26,7 @@ const ReviewCard = () => {
             </div>
             <div className="text-end">
               <h5>21 July 2022</h5>
-              <CarReview carNumberOfReviews={4} showReviewText={false} />
+              <CarReviewStar carNumberOfReviews={4} showReviewText={false} />
             </div>
           </div>
           <p className="font-normal  text-[14px] text-[color:var(--secondary-dark-400)] py-4 pr-4">
