@@ -9,8 +9,8 @@ const CarReviewStar = ({
   showReviewText?: boolean;
 }) => {
   return (
-    <div className="flex gap-6 py-2">
-      <div className="flex gap-3">
+    <div className="flex gap-4 md:gap-6 py-2">
+      <div className="flex gap-2 md:gap-3">
         {Array.from({ length: 5 }).map((eachStar, index) => (
           <Star
             key={index}
