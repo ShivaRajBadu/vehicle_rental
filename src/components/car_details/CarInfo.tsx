@@ -16,8 +16,9 @@ const CarInfo = () => {
       </div>
       <CarReviewStar carNumberOfReviews={2} />
       <p className="text-[16px] md:text-[20px] font-normal text-[color:var(--secondary-dark-400)] py-8">
-        NISMO has become the embodiment of Nissan's outstanding performance,
-        inspired by the most unforgiving proving ground, the "race track".
+        NISMO has become the embodiment of Nissan&apos;s outstanding
+        performance, inspired by the most unforgiving proving ground, the
+        &quot;Trace track&quot;.
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 grid-rows-2 py-4 gap-2 md:gap-x-10 md:gap-y-6">
         <CarFeature label="Gasoline" value="70L" />

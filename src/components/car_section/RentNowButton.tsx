@@ -10,7 +10,7 @@ const RentNowButton = ({
   const router = useRouter();
   return (
     <button
-      onClick={() => router.push("/detail")}
+      onClick={() => router.push("/rent-car")}
       className="bg-[color:var(--primary-dark-500)] rounded-md font-bold   text-[color:var(--white)] hover:bg-[color:var(--primary-dark-600)] duration-200"
       style={{
         paddingBlock: paddingY,
