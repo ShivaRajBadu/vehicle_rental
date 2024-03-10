@@ -9,6 +9,7 @@ const RentalInfo = () => {
         subtitle="Please select your rental date"
         stepNumber={2}
       />
+      <div></div>
     </div>
   );
 };
